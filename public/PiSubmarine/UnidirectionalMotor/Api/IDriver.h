@@ -4,10 +4,10 @@
 
 namespace PiSubmarine
 {
-    class IUnidirectionalMotor
+    class IDriver
     {
 public:
-        virtual ~IUnidirectionalMotor() = default;
+        virtual ~IDriver() = default;
         virtual void SetPowered(bool enabled) = 0;
         [[nodiscard]] virtual bool IsPowered() const = 0;
         [[nodiscard]] virtual SignedNormalizedFraction GetDutyCycle() const = 0;
