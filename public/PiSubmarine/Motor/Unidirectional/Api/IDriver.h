@@ -1,6 +1,6 @@
 #pragma once
 
-#include "PiSubmarine/SignedNormalizedFraction.h"
+#include "PiSubmarine/NormalizedFraction.h"
 
 namespace PiSubmarine::Motor::Unidirectional::Api
 {
@@ -10,8 +10,8 @@ public:
         virtual ~IDriver() = default;
         virtual void SetPowered(bool enabled) = 0;
         [[nodiscard]] virtual bool IsPowered() const = 0;
-        [[nodiscard]] virtual SignedNormalizedFraction GetDutyCycle() const = 0;
-        virtual void SetDutyCycle(SignedNormalizedFraction dutyCycle) = 0;
+        [[nodiscard]] virtual NormalizedFraction GetDutyCycle() const = 0;
+        virtual void SetDutyCycle(NormalizedFraction dutyCycle) = 0;
     };
 }
 
