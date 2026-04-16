@@ -12,7 +12,7 @@ public:
         [[nodiscard]] virtual Error::Api::Result<void> SetPowered(bool enabled) = 0;
         [[nodiscard]] virtual Error::Api::Result<bool> IsPowered() const = 0;
         [[nodiscard]] virtual Error::Api::Result<NormalizedFraction> GetDutyCycle() const = 0;
-        [[nodiscard]] virtual Error::Api::Result<void> SetDutyCycle(Error::Api::Result<NormalizedFraction> dutyCycle) = 0;
+        [[nodiscard]] virtual Error::Api::Result<void> SetDutyCycle(NormalizedFraction dutyCycle) = 0;
         [[nodiscard]] virtual Error::Api::Result<NormalizedFraction> GetMinimumEffectiveDutyCycle() const = 0;
     };
 }
