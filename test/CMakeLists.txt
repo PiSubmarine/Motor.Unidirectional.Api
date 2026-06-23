@@ -5,6 +5,7 @@ include(FetchContent)
 project(${PISUBMARINE_MODULE_NAME}.Test LANGUAGES CXX)
 
 set(${PISUBMARINE_MODULE_NAME}.Test.Sources
+        "PiSubmarine/Motor/Unidirectional/Api/IControllerMockTest.cpp"
         "PiSubmarine/Motor/Unidirectional/Api/IControllerTest.cpp")
 
 enable_testing()
@@ -16,6 +17,7 @@ add_executable(${PISUBMARINE_MODULE_NAME}.Test ${${PISUBMARINE_MODULE_NAME}.Test
 PiSubmarineInitTarget(${PISUBMARINE_MODULE_NAME}.Test)
 
 target_link_libraries(${PISUBMARINE_MODULE_NAME}.Test PRIVATE ${PISUBMARINE_MODULE_NAME})
+target_link_libraries(${PISUBMARINE_MODULE_NAME}.Test PRIVATE ${PISUBMARINE_MODULE_NAME}.Mock)
 target_link_libraries(${PISUBMARINE_MODULE_NAME}.Test PRIVATE spdlog::spdlog)
 target_link_libraries(${PISUBMARINE_MODULE_NAME}.Test PRIVATE GTest::gtest_main)
 include(GoogleTest)
